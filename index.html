@@ -768,4 +768,532 @@
           </ul>
 
           <div class="alert alert-success">
-            <strong>✅ Dica Profissional:</strong> Configure seu e-mail para mostrar sempre
+            <strong>✅ Dica Profissional:</strong> Configure seu e-mail para mostrar sempre o endereço completo do remetente, não apenas o nome exibido. Ative a visualização de cabeçalhos completos quando necessário.
+          </div>
+
+          <button class="btn btn-primary" onclick="markSectionComplete('identificar')">✓ Marcar como Concluído</button>
+        </section>
+
+        <section id="prevenir" class="card" aria-labelledby="heading-prevenir">
+          <h2 id="heading-prevenir">🛡️ Como se Proteger: Guia Completo de Prevenção</h2>
+          
+          <div class="alert alert-info">
+            <strong>💡 Princípio Fundamental:</strong> A segurança é uma camada múltipla. Não existe proteção 100% infalível, mas seguindo essas práticas você reduz drasticamente os riscos.
+          </div>
+
+          <h3>🔐 1. Medidas Técnicas Essenciais</h3>
+          
+          <div class="interactive-checklist">
+            <h4>Implementação de Segurança (marque o que já faz):</h4>
+            
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div>
+                <strong>🔑 Autenticação de Dois Fatores (2FA/MFA):</strong> Ative em TODAS as contas importantes (e-mail, banco, redes sociais, trabalho). Use apps como Google Authenticator, Microsoft Authenticator ou chaves físicas quando possível.
+              </div>
+            </div>
+
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div>
+                <strong>🗝️ Gerenciador de Senhas:</strong> Use ferramentas como Bitwarden, LastPass ou 1Password. Crie senhas únicas de 12+ caracteres para cada serviço. Nunca reutilize senhas importantes.
+              </div>
+            </div>
+
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div>
+                <strong>🔄 Atualizações Automáticas:</strong> Mantenha sistema operacional, navegadores e antivírus sempre atualizados. Ative atualizações automáticas quando possível para correções de segurança críticas.
+              </div>
+            </div>
+
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div>
+                <strong>🛡️ Software de Segurança:</strong> Use antivírus com proteção em tempo real e anti-phishing. Considere soluções empresariais com filtros de e-mail avançados.
+              </div>
+            </div>
+
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div>
+                <strong>🌐 Navegação Segura:</strong> Use navegadores atualizados com proteção anti-phishing ativa. Verifique sempre se sites sensíveis usam HTTPS (cadeado verde na barra de endereço).
+              </div>
+            </div>
+          </div>
+
+          <h3>🧠 2. Comportamentos de Segurança</h3>
+          <ul>
+            <li><strong>✋ Pause Antes de Clicar:</strong> Desenvolva o hábito de questionar toda solicitação urgente ou inesperada</li>
+            <li><strong>📞 Verifique por Canal Oficial:</strong> Sempre confirme solicitações suspeitas ligando diretamente para a empresa</li>
+            <li><strong>🔍 Analise URLs:</strong> Digite endereços manualmente em vez de clicar em links quando possível</li>
+            <li><strong>🚫 Não Compartilhe Informações Sensíveis:</strong> Nunca forneça senhas, códigos ou dados bancários por e-mail/SMS</li>
+            <li><strong>📚 Mantenha-se Informado:</strong> Acompanhe alertas de segurança e novas técnicas de phishing</li>
+          </ul>
+
+          <h3>🚨 Plano de Resposta a Incidentes</h3>
+          
+          <div class="alert alert-warning">
+            <strong>⚡ Se Você Clicou em um Link Suspeito - AÇÃO IMEDIATA:</strong>
+          </div>
+
+          <ol>
+            <li><strong>🛑 PARE Imediatamente:</strong> Não digite mais nenhuma informação. Feche a aba/janela do navegador.</li>
+            <li><strong>🔌 Desconecte da Internet:</strong> Desligue Wi-Fi ou cabo de rede para impedir comunicação com servidores maliciosos.</li>
+            <li><strong>📞 Alerte a Equipe de TI:</strong> Comunique IMEDIATAMENTE ao departamento de Segurança da Informação (seguranca@empresa.local).</li>
+            <li><strong>🔐 Troque Todas as Senhas:</strong> Altere senhas de e-mail, banco, sistemas corporativos - use senhas completamente novas e fortes.</li>
+            <li><strong>🔍 Monitore Contas:</strong> Verifique extratos bancários e atividades em contas nos próximos dias/semanas.</li>
+            <li><strong>🛡️ Execute Scan Completo:</strong> Rode verificação completa do antivírus e considere formatação em casos graves.</li>
+          </ol>
+
+          <h3>📊 Template para Reportar Incidentes</h3>
+          
+          <div class="example-email">
+            <h4>📧 E-mail para Reportar Phishing:</h4>
+            <p><strong>Para:</strong> seguranca@empresa.local</p>
+            <p><strong>Assunto:</strong> [URGENTE] Possível Clique em Link de Phishing - [SEU NOME]</p>
+            <p>Prezada equipe de Segurança,</p>
+            <p><strong>Data/Hora:</strong> [DD/MM/AAAA às HH:MM]<br>
+            <strong>Ação realizada:</strong> Cliquei em link suspeito / Forneci credenciais / Baixei anexo<br>
+            <strong>Origem:</strong> E-mail / SMS / WhatsApp / Website<br>
+            <strong>Remetente/URL:</strong> [copie exatamente como recebeu]<br>
+            <strong>Informações fornecidas:</strong> [descreva o que foi digitado - SEM incluir as informações reais]<br>
+            <strong>Ações já tomadas:</strong> [ex: desconectei da rede, fechei navegador]</p>
+            <p>Aguardo orientações urgentes.</p>
+            <p>Atenciosamente,<br>[Seu Nome e Departamento]</p>
+          </div>
+
+          <button class="btn btn-primary" onclick="markSectionComplete('prevenir')">✓ Marcar como Concluído</button>
+        </section>
+
+        <section class="card" aria-labelledby="heading-video">
+          <h2 id="heading-video">🎥 Vídeo Educativo: Phishing na Prática</h2>
+          <p class="small">Assista a este vídeo educativo para ver exemplos reais e dicas práticas de como se proteger contra ataques de phishing.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Q1uOhtm6aSo" 
+                    title="O que é Phishing e como evitar essa ameaça" 
+                    allowfullscreen
+                    loading="lazy"
+                    aria-describedby="video-description">
+            </iframe>
+          </div>
+          <p id="video-description" class="small">Este vídeo explica os conceitos de phishing com exemplos práticos e demonstra técnicas de identificação e prevenção.</p>
+        </section>
+
+        <section id="recursos" class="card" aria-labelledby="heading-recursos">
+          <h2 id="heading-recursos">📚 Recursos Adicionais e Material de Apoio</h2>
+          
+          <h3>🎯 Simuladores de Phishing (Para Treinamento)</h3>
+          <ul>
+            <li><strong>PhishMe:</strong> Plataforma corporativa para simulações realistas</li>
+            <li><strong>KnowBe4:</strong> Treinamento gamificado em segurança</li>
+            <li><strong>Proofpoint:</strong> Simulações e métricas avançadas</li>
+            <li><strong>OpenPhish:</strong> Base de dados gratuita para pesquisa</li>
+          </ul>
+
+          <h3>🛠️ Ferramentas de Análise</h3>
+          <ul>
+            <li><strong>VirusTotal:</strong> Análise de URLs e arquivos suspeitos</li>
+            <li><strong>URLVoid:</strong> Verificador de reputação de websites</li>
+            <li><strong>MXToolbox:</strong> Análise de cabeçalhos de e-mail</li>
+            <li><strong>Have I Been Pwned:</strong> Verificar se seus dados foram vazados</li>
+          </ul>
+
+          <h3>📖 Material de Leitura Técnica</h3>
+          <ul>
+            <li><strong>NIST Cybersecurity Framework:</strong> Diretrizes oficiais de segurança</li>
+            <li><strong>SANS Institute:</strong> Pesquisas e whitepapers sobre phishing</li>
+            <li><strong>CERT.br:</strong> Alertas e estudos sobre segurança no Brasil</li>
+            <li><strong>Microsoft Security Intelligence:</strong> Relatórios de ameaças atuais</li>
+          </ul>
+
+          <button class="btn btn-primary" onclick="markSectionComplete('recursos')">✓ Marcar como Concluído</button>
+        </section>
+
+        <section class="card" aria-labelledby="heading-faq">
+          <h2 id="heading-faq">❓ Perguntas Frequentes (FAQ)</h2>
+          
+          <div class="faq-item">
+            <h3>🎯 O que a empresa faz com os resultados dos treinamentos?</h3>
+            <p>Os dados são usados exclusivamente para melhorar nossos programas de segurança. Analisamos resultados de forma agregada por departamento, nunca identificando indivíduos publicamente. O objetivo é fortalecer a cultura de segurança de toda a organização.</p>
+            
+            <p class="small"><strong>Métricas que acompanhamos:</strong></p>
+            <ul class="small">
+              <li>Taxa de cliques por departamento (não por pessoa)</li>
+              <li>Tempo médio para identificar phishing</li>
+              <li>Melhoria na detecção ao longo do tempo</li>
+              <li>Tipos de simulação mais eficazes</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3>🔒 Vocês coletam senhas reais durante simulações?</h3>
+            <p><strong>NÃO, jamais!</strong> Nossas simulações são projetadas para educar, não para comprometer. Usamos páginas que apenas registram tentativas de inserção, mas nunca armazenamos credenciais reais. Se você inserir uma senha real por engano, ela não é salva.</p>
+            
+            <div class="alert alert-success">
+              <strong>Garantias de Segurança:</strong>
+              <ul>
+                <li>✅ Nenhuma senha é armazenada ou transmitida</li>
+                <li>✅ Simulações rodam em ambientes isolados</li>
+                <li>✅ Dados coletados são apenas estatísticas anônimas</li>
+                <li>✅ Conformidade com LGPD e políticas internas</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>🚨 E se eu receber phishing real fora do treinamento?</h3>
+            <p>Siga exatamente o mesmo protocolo das simulações:</p>
+            <ol>
+              <li><strong>NÃO clique</strong> em links nem abra anexos</li>
+              <li><strong>Encaminhe a mensagem</strong> para seguranca@empresa.local</li>
+              <li><strong>Delete</strong> o e-mail suspeito após reportar</li>
+              <li><strong>Alerte colegas</strong> se necessário</li>
+            </ol>
+            
+            <p class="small">Se já clicou: siga imediatamente o <a href="#prevenir">plano de resposta a incidentes</a>.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>📱 Phishing também acontece no WhatsApp/Telegram?</h3>
+            <p><strong>Sim, e está crescendo rapidamente!</strong> Mensagens falsas sobre:</p>
+            <ul>
+              <li>🎁 Cupons e promoções falsas</li>
+              <li>📦 Entregas que não existem</li>
+              <li>💰 PIX recebido (golpe do falso PIX)</li>
+              <li>🏥 Links falsos sobre saúde/COVID</li>
+              <li>🔗 Aplicativos maliciosos</li>
+            </ul>
+            
+            <div class="alert alert-warning">
+              <strong>⚠️ Dica:</strong> No WhatsApp, verifique sempre o número do remetente. Empresas legítimas têm contas verificadas (selo azul). Desconfie de links encurtados de números desconhecidos.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>🧠 Por que algumas pessoas caem mais em phishing?</h3>
+            <p>Não é falta de inteligência! Fatores que aumentam vulnerabilidade:</p>
+            <ul>
+              <li>📧 <strong>Volume de e-mails:</strong> Quem recebe muitos e-mails processa mais rapidamente</li>
+              <li>⏰ <strong>Pressão de tempo:</strong> Pressa leva a decisões menos cuidadosas</li>
+              <li>💼 <strong>Cargos de responsabilidade:</strong> Executivos são alvos de ataques mais sofisticados</li>
+              <li>📱 <strong>Dispositivos móveis:</strong> Interfaces menores dificultam análise de URLs</li>
+              <li>🎯 <strong>Informações pessoais expostas:</strong> Redes sociais facilitam spear phishing</li>
+            </ul>
+          </div>
+
+          <div class="faq-item">
+            <h3>📊 Como saber se nossa empresa está bem protegida?</h3>
+            <p><strong>Indicadores de maturidade em segurança:</strong></p>
+            <ul>
+              <li>📉 Taxa de cliques em simulações < 5%</li>
+              <li>⏱️ Tempo de reporte < 1 hora</li>
+              <li>🔄 Treinamentos regulares (trimestral/semestral)</li>
+              <li>🛡️ Filtros de e-mail com boa eficácia</li>
+              <li>👥 Cultura de segurança: pessoas se sentem confortáveis reportando</li>
+              <li>📈 Melhoria contínua nas métricas de segurança</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>✅ Checklist Rápido Diário</h3>
+          <p class="small">Use este guia no seu dia a dia:</p>
+          
+          <div class="interactive-checklist">
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div><strong>2FA ativado</strong> em contas críticas</div>
+            </div>
+            
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div><strong>Verificar remetente</strong> antes de clicar</div>
+            </div>
+            
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div><strong>Hover nos links</strong> para ver destino real</div>
+            </div>
+            
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div><strong>Dispositivos atualizados</strong> automaticamente</div>
+            </div>
+            
+            <div class="checklist-item" onclick="toggleCheck(this)" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checkbox"></div>
+              <div><strong>Reportar suspeitas</strong> imediatamente</div>
+            </div>
+          </div>
+          
+          <div class="quick-actions">
+            <a href="#prevenir" class="btn btn-primary">📋 Ver Checklist Completo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🌐 Recursos Oficiais</h3>
+          <ul>
+            <li><a href="https://cert.br/" target="_blank" rel="noopener nofollow">🇧🇷 CERT.br</a> - Centro Nacional de Segurança</li>
+            <li><a href="https://cartilha.cert.br/" target="_blank" rel="noopener nofollow">📚 Cartilha de Segurança</a> - Guias oficiais</li>
+            <li><a href="https://www.gov.br/anatel/pt-br/assuntos/dicas-contra-fraudes" target="_blank" rel="noopener nofollow">🏛️ ANATEL</a> - Dicas contra fraudes</li>
+            <li><a href="https://www.procon.org.br" target="_blank" rel="noopener nofollow">⚖️ PROCON</a> - Defesa do consumidor</li>
+            <li><a href="https://support.microsoft.com/pt-br/windows/proteja-se-contra-phishing-0c7ea947-ba98-3bd9-7184-430e1f860a44" target="_blank" rel="noopener nofollow">🖥️ Microsoft Security</a> - Guias técnicos</li>
+          </ul>
+          
+          <div class="alert alert-info">
+            <p class="small">💡 <strong>Dica:</strong> Salve estes links nos favoritos para consulta rápida!</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🚨 Contato de Emergência</h3>
+          <p class="small">Para reportar incidentes ou esclarecer dúvidas:</p>
+          
+          <div class="quick-actions">
+            <p><strong>📧 E-mail:</strong><br><a href="mailto:seguranca@empresa.local">seguranca@empresa.local</a></p>
+            <p><strong>📞 Telefone:</strong><br>(11) 1234-5678 (Ramal: 1234)</p>
+            <p><strong>💬 Chat Interno:</strong><br>Canal #seguranca no Slack</p>
+          </div>
+          
+          <button class="btn btn-warning" onclick="reportPhishing()" aria-describedby="report-help">
+            🚨 Reportar Phishing Agora
+          </button>
+          <p id="report-help" class="small" style="margin-top: 8px;">Use se clicou em algo suspeito ou recebeu mensagem fraudulenta</p>
+          
+          <div id="report-success" class="alert alert-success success-message" style="display: none; margin-top: 16px;">
+            ✅ <strong>Reporte enviado!</strong> Nossa equipe foi notificada e entrará em contato em breve.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>📈 Estatísticas de Segurança</h3>
+          <div class="small">
+            <p><strong>📊 Última simulação:</strong></p>
+            <ul>
+              <li>✅ Taxa de identificação: 87%</li>
+              <li>⏱️ Tempo médio de reporte: 23 min</li>
+              <li>📧 E-mails analisados: 2,847</li>
+              <li>🎯 Melhor departamento: TI (96%)</li>
+            </ul>
+            
+            <p style="margin-top: 16px;"><strong>🏆 Meta 2024:</strong></p>
+            <ul>
+              <li>🎯 Identificação > 95%</li>
+              <li>⚡ Reporte < 15 minutos</li>
+              <li>📚 100% dos funcionários treinados</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🔄 Próximos Treinamentos</h3>
+          <div class="small">
+            <p><strong>📅 Cronograma:</strong></p>
+            <ul>
+              <li>🎯 <strong>15/Out:</strong> Simulação Spear Phishing</li>
+              <li>📱 <strong>30/Out:</strong> Workshop: Segurança Mobile</li>
+              <li>🛡️ <strong>15/Nov:</strong> Palestra: Ransomware</li>
+              <li>🎮 <strong>30/Nov:</strong> Gamificação de Segurança</li>
+            </ul>
+            
+            <a href="#" class="btn btn-secondary" style="margin-top: 12px;">📝 Inscrever-se</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="small">
+        <p><strong>Conscientização em Segurança Digital</strong></p>
+        <p>Desenvolvido pela equipe de Segurança da Informação • © <span id="currentYear"></span> • Versão 2.1</p>
+        <p>Última atualização: <span id="lastUpdate"></span> • 
+        <a href="mailto:seguranca@empresa.local">Feedback</a> • 
+        <a href="#" onclick="window.print()">🖨️ Imprimir</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Função para marcar seções como concluídas e atualizar progresso
+    let completedSections = new Set();
+    const totalSections = 4; // o-que-e, tipos, identificar, prevenir, recursos
+    
+    function markSectionComplete(sectionId) {
+      completedSections.add(sectionId);
+      updateProgress();
+      
+      // Feedback visual
+      const button = event.target;
+      button.innerHTML = '✅ Concluído!';
+      button.style.background = 'var(--success)';
+      button.disabled = true;
+      
+      // Salvar progresso no localStorage se disponível (não funciona em artifacts)
+      try {
+        localStorage.setItem('phishing-training-progress', JSON.stringify([...completedSections]));
+      } catch(e) {
+        // Ignorar erro de localStorage em ambiente de artifact
+      }
+    }
+    
+    function updateProgress() {
+      const progress = (completedSections.size / totalSections) * 100;
+      const progressFill = document.getElementById('progressFill');
+      const progressText = document.getElementById('progressText');
+      
+      progressFill.style.width = progress + '%';
+      progressText.textContent = Math.round(progress) + '% concluído';
+      
+      // Atualizar aria-valuenow para acessibilidade
+      const progressBar = progressFill.parentElement;
+      progressBar.setAttribute('aria-valuenow', Math.round(progress));
+      
+      if (progress === 100) {
+        progressText.textContent = '🎉 Treinamento Concluído!';
+        showCompletionMessage();
+      }
+    }
+    
+    function showCompletionMessage() {
+      // Criar mensagem de conclusão
+      const alert = document.createElement('div');
+      alert.className = 'alert alert-success success-message';
+      alert.innerHTML = `
+        <strong>🎉 Parabéns!</strong> Você completou todo o treinamento de conscientização sobre phishing. 
+        Agora você está mais preparado para identificar e evitar ataques cibernéticos. 
+        <br><br>
+        <strong>Próximos passos:</strong>
+        <ul style="margin: 10px 0;">
+          <li>📝 Pratique o que aprendeu no dia a dia</li>
+          <li>🔄 Compartilhe conhecimento com colegas</li>
+          <li>📚 Fique atento a atualizações de segurança</li>
+        </ul>
+      `;
+      
+      // Inserir após a seção de progresso
+      const progressSection = document.querySelector('.progress-section');
+      progressSection.parentNode.insertBefore(alert, progressSection.nextSibling);
+    }
+    
+    // Função para alternar checklist items
+    function toggleCheck(element) {
+      const checkbox = element.querySelector('.checkbox');
+      const isChecked = checkbox.classList.contains('checked');
+      
+      if (isChecked) {
+        checkbox.classList.remove('checked');
+        checkbox.innerHTML = '';
+        element.setAttribute('aria-checked', 'false');
+      } else {
+        checkbox.classList.add('checked');
+        checkbox.innerHTML = '✓';
+        element.setAttribute('aria-checked', 'true');
+      }
+    }
+    
+    // Função para reportar phishing
+    function reportPhishing() {
+      // Simular envio de reporte
+      const successMessage = document.getElementById('report-success');
+      successMessage.style.display = 'block';
+      
+      // Esconder após 5 segundos
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+      
+      // Em implementação real, enviaria dados para o backend
+      console.log('Reporte de phishing enviado:', {
+        timestamp: new Date().toISOString(),
+        user: 'anonymized-user-id',
+        type: 'manual-report'
+      });
+    }
+    
+    // Inicialização da página
+    document.addEventListener('DOMContentLoaded', function() {
+      // Atualizar ano atual
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      
+      // Atualizar data de última modificação
+      const lastUpdate = new Date().toLocaleDateString('pt-BR');
+      document.getElementById('lastUpdate').textContent = lastUpdate;
+      
+      // Carregar progresso salvo (se disponível)
+      try {
+        const savedProgress = localStorage.getItem('phishing-training-progress');
+        if (savedProgress) {
+          const completed = JSON.parse(savedProgress);
+          completed.forEach(sectionId => completedSections.add(sectionId));
+          updateProgress();
+          
+          // Marcar botões como concluídos
+          completed.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+              const button = section.querySelector('.btn-primary');
+              if (button) {
+                button.innerHTML = '✅ Concluído!';
+                button.style.background = 'var(--success)';
+                button.disabled = true;
+              }
+            }
+          });
+        }
+      } catch(e) {
+        // Ignorar erro de localStorage
+      }
+      
+      // Adicionar navegação suave
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Adicionar suporte a teclado para checklist
+      document.querySelectorAll('.checklist-item').forEach(item => {
+        item.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleCheck(this);
+          }
+        });
+      });
+    });
+    
+    // Função para analytics (simulada)
+    function trackEvent(eventName, details) {
+      console.log('Analytics Event:', {
+        event: eventName,
+        details: details,
+        timestamp: new Date().toISOString(),
+        page: 'phishing-awareness-training'
+      });
+    }
+    
+    // Rastrear engajamento (exemplo)
+    document.addEventListener('click', function(e) {
+      if (e.target.matches('.btn, .checklist-item, a[href^="#"]')) {
+        trackEvent('user-interaction', {
+          element: e.target.tagName,
+          action: 'click',
+          content: e.target.textContent.trim().substring(0, 50)
+        });
+      }
+    });
+  </script>
+</body>
+</html>
