@@ -1051,57 +1051,32 @@
         </div>
 
         <div class="card">
-          <h3>🚨 Contato de Emergência</h3>
-          <p class="small">Para reportar incidentes ou esclarecer dúvidas:</p>
+          <h3>📞 Como Reportar Incidentes</h3>
+          <p class="small">Se você suspeitar ou clicar em phishing:</p>
           
           <div class="quick-actions">
-            <p><strong>📧 E-mail:</strong><br><a href="mailto:seguranca@empresa.local">seguranca@empresa.local</a></p>
-            <p><strong>📞 Telefone:</strong><br>(11) 1234-5678 (Ramal: 1234)</p>
-            <p><strong>💬 Chat Interno:</strong><br>Canal #seguranca no Slack</p>
+            <div class="alert alert-info">
+              <p><strong>1. Não entre em pânico</strong><br>
+              Pare imediatamente qualquer ação</p>
+              
+              <p><strong>2. Documente o incidente</strong><br>
+              Tire screenshot da mensagem suspeita</p>
+              
+              <p><strong>3. Contate sua equipe de TI</strong><br>
+              Use os canais oficiais da sua empresa</p>
+              
+              <p><strong>4. Siga as orientações</strong><br>
+              Implemente o plano de resposta da seção "Prevenir"</p>
+            </div>
           </div>
           
           <button class="btn btn-warning" onclick="reportPhishing()" aria-describedby="report-help">
-            🚨 Reportar Phishing Agora
+            📋 Ver Guia de Reporte Completo
           </button>
-          <p id="report-help" class="small" style="margin-top: 8px;">Use se clicou em algo suspeito ou recebeu mensagem fraudulenta</p>
+          <p id="report-help" class="small" style="margin-top: 8px;">Acesse o template e instruções detalhadas</p>
           
           <div id="report-success" class="alert alert-success success-message" style="display: none; margin-top: 16px;">
-            ✅ <strong>Reporte enviado!</strong> Nossa equipe foi notificada e entrará em contato em breve.
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>📈 Estatísticas de Segurança</h3>
-          <div class="small">
-            <p><strong>📊 Última simulação:</strong></p>
-            <ul>
-              <li>✅ Taxa de identificação: 87%</li>
-              <li>⏱️ Tempo médio de reporte: 23 min</li>
-              <li>📧 E-mails analisados: 2,847</li>
-              <li>🎯 Melhor departamento: TI (96%)</li>
-            </ul>
-            
-            <p style="margin-top: 16px;"><strong>🏆 Meta 2024:</strong></p>
-            <ul>
-              <li>🎯 Identificação > 95%</li>
-              <li>⚡ Reporte < 15 minutos</li>
-              <li>📚 100% dos funcionários treinados</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>🔄 Próximos Treinamentos</h3>
-          <div class="small">
-            <p><strong>📅 Cronograma:</strong></p>
-            <ul>
-              <li>🎯 <strong>15/Out:</strong> Simulação Spear Phishing</li>
-              <li>📱 <strong>30/Out:</strong> Workshop: Segurança Mobile</li>
-              <li>🛡️ <strong>15/Nov:</strong> Palestra: Ransomware</li>
-              <li>🎮 <strong>30/Nov:</strong> Gamificação de Segurança</li>
-            </ul>
-            
-            <a href="#" class="btn btn-secondary" style="margin-top: 12px;">📝 Inscrever-se</a>
+            ✅ <strong>Guia exibido!</strong> Siga as orientações da seção "Como se Proteger" para reportar adequadamente.
           </div>
         </div>
       </aside>
@@ -1121,7 +1096,7 @@
   <script>
     // Função para marcar seções como concluídas e atualizar progresso
     let completedSections = new Set();
-    const totalSections = 4; // o-que-e, tipos, identificar, prevenir, recursos
+    const totalSections = 5; // o-que-e, tipos, identificar, prevenir, recursos
     
     function markSectionComplete(sectionId) {
       completedSections.add(sectionId);
@@ -1198,20 +1173,30 @@
     
     // Função para reportar phishing
     function reportPhishing() {
-      // Simular envio de reporte
+      // Simular abertura do guia de reporte
       const successMessage = document.getElementById('report-success');
       successMessage.style.display = 'block';
       
-      // Esconder após 5 segundos
+      // Scroll para a seção de prevenção
+      const preventSection = document.getElementById('prevenir');
+      if (preventSection) {
+        setTimeout(() => {
+          preventSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 500);
+      }
+      
+      // Esconder mensagem após 5 segundos
       setTimeout(() => {
         successMessage.style.display = 'none';
       }, 5000);
       
-      // Em implementação real, enviaria dados para o backend
-      console.log('Reporte de phishing enviado:', {
+      // Analytics simulado
+      console.log('Guia de reporte acessado:', {
         timestamp: new Date().toISOString(),
-        user: 'anonymized-user-id',
-        type: 'manual-report'
+        action: 'view-report-guide'
       });
     }
     
