@@ -493,6 +493,23 @@
       }
     }
 
+    /* Animation for modal */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
     /* Animation for success messages */
     @keyframes slideIn {
       from {
@@ -547,6 +564,121 @@
   </style>
 </head>
 <body>
+  <!-- Alerta Modal de Abertura -->
+  <div id="phishingAlert" class="modal-overlay" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  ">
+    <div class="modal-content" style="
+      background: white;
+      max-width: 600px;
+      margin: 20px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: slideInUp 0.5s ease;
+    ">
+      <div style="
+        background: linear-gradient(135deg, #dc2626, #b91c1c);
+        color: white;
+        padding: 30px;
+        border-radius: 16px 16px 0 0;
+        text-align: center;
+        position: relative;
+      ">
+        <div style="font-size: 48px; margin-bottom: 16px;">🚨</div>
+        <h2 style="margin: 0; font-size: 24px; font-weight: 800;">
+          VOCÊ FOI COMPROMETIDO!
+        </h2>
+        <p style="margin: 8px 0 0 0; opacity: 0.9; font-size: 16px;">
+          Se este fosse um ataque real de phishing...
+        </p>
+        
+        <button onclick="closeAlert()" style="
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background: rgba(255, 255, 255, 0.2);
+          border: none;
+          color: white;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: bold;
+          transition: all 0.2s ease;
+        " onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+          ✕
+        </button>
+      </div>
+      
+      <div style="padding: 30px;">
+        <div style="
+          background: #fef2f2;
+          border: 2px solid #fecaca;
+          border-radius: 12px;
+          padding: 20px;
+          margin-bottom: 24px;
+        ">
+          <h3 style="margin: 0 0 16px 0; color: #dc2626; display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 20px;">⚠️</span>
+            O que poderia ter acontecido:
+          </h3>
+          <ul style="margin: 0; padding-left: 20px; color: #7f1d1d;">
+            <li style="margin-bottom: 8px;"><strong>🔓 Senhas e dados pessoais roubados</strong></li>
+            <li style="margin-bottom: 8px;"><strong>💻 Malware instalado no seu dispositivo</strong></li>
+            <li style="margin-bottom: 8px;"><strong>🏢 Acesso não autorizado a sistemas da empresa</strong></li>
+            <li style="margin-bottom: 8px;"><strong>💰 Prejuízos financeiros significativos</strong></li>
+            <li><strong>📧 Seus contatos também seriam atacados</strong></li>
+          </ul>
+        </div>
+        
+        <div style="
+          background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(16, 185, 129, 0.05));
+          border: 2px solid rgba(5, 150, 105, 0.3);
+          border-radius: 12px;
+          padding: 20px;
+          margin-bottom: 24px;
+        ">
+          <h3 style="margin: 0 0 12px 0; color: #059669; display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 20px;">✅</span>
+            Mas relaxe - esta é apenas uma simulação!
+          </h3>
+          <p style="margin: 0; color: #065f46;">
+            Você está seguro. Agora você tem uma oportunidade valiosa de aprender como se proteger contra ataques reais de phishing.
+          </p>
+        </div>
+        
+        <div style="text-align: center;">
+          <button onclick="closeAlert()" style="
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+          " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(30, 64, 175, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(30, 64, 175, 0.3)'">
+            🛡️ Começar Treinamento de Segurança
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <header role="banner">
       <div class="brand">
@@ -575,6 +707,32 @@
         <span class="tag" role="listitem">❓ FAQ Completo</span>
       </div>
     </section>
+
+    <!-- Alerta de Simulação -->
+    <div class="alert alert-warning" style="margin-bottom: 30px; border-left-width: 6px; animation: slideIn 0.5s ease;">
+      <div style="display: flex; align-items: flex-start; gap: 16px;">
+        <div style="font-size: 32px; color: var(--warning);">⚠️</div>
+        <div>
+          <h3 style="margin: 0 0 12px 0; color: var(--warning); font-size: 20px;">
+            🚨 ATENÇÃO: Se este fosse um ataque real de phishing, você teria sido comprometido!
+          </h3>
+          <p style="margin: 0 0 12px 0; font-weight: 600;">
+            <strong>Você clicou em um link e acessou este conteúdo.</strong> Em um cenário real, isso poderia significar:
+          </p>
+          <ul style="margin: 8px 0; padding-left: 20px;">
+            <li><strong>🔓 Suas credenciais poderiam ter sido roubadas</strong></li>
+            <li><strong>💻 Malware poderia ter sido instalado no seu dispositivo</strong></li>
+            <li><strong>🏢 Dados da empresa poderiam ter sido comprometidos</strong></li>
+            <li><strong>💰 Você poderia ter sofrido prejuízos financeiros</strong></li>
+          </ul>
+          <div style="background: rgba(217, 119, 6, 0.2); padding: 16px; border-radius: 8px; margin-top: 16px;">
+            <strong style="color: var(--warning);">💡 A boa notícia:</strong> 
+            Esta é apenas uma simulação educativa! Agora você tem a oportunidade de aprender a se proteger contra ataques reais. 
+            Continue lendo para descobrir como identificar e evitar phishing.
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Progress Tracking -->
     <div class="progress-section">
@@ -1085,15 +1243,39 @@
     <footer role="contentinfo">
       <div class="small">
         <p><strong>Conscientização em Segurança Digital</strong></p>
-        <p>Desenvolvido pela equipe de Segurança da Informação • © <span id="currentYear"></span> • Versão 2.1</p>
-        <p>Última atualização: <span id="lastUpdate"></span> • 
-        <a href="mailto:seguranca@empresa.local">Feedback</a> • 
+        <p>Desenvolvido por Theo Cardoso Stracke <span id="currentYear"></span> • Versão 2.1</p>
+        <p>Última atualização: <span id="lastUpdate"></span> •  
         <a href="#" onclick="window.print()">🖨️ Imprimir</a></p>
       </div>
     </footer>
   </div>
 
   <script>
+    // Função para fechar o alerta modal inicial
+    function closeAlert() {
+      const modal = document.getElementById('phishingAlert');
+      modal.style.animation = 'fadeOut 0.3s ease';
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+      
+      // Adicionar animação de fade out ao CSS dinamicamente
+      if (!document.querySelector('#fadeOutAnimation')) {
+        const style = document.createElement('style');
+        style.id = 'fadeOutAnimation';
+        style.textContent = `
+          @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+      
+      // Analytics - primeira interação
+      trackEvent('modal-closed', { action: 'start-training' });
+    }
+
     // Função para marcar seções como concluídas e atualizar progresso
     let completedSections = new Set();
     const totalSections = 5; // o-que-e, tipos, identificar, prevenir, recursos
