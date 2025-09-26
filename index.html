@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Conscientização: Phishing — Previna-se</title>
+  <meta name="description" content="Site educativo sobre phishing: o que é, exemplos, como identificar e como se proteger. Inclui checklist e vídeo explicativo para treinamento."/>
+  <style>
+    :root{
+      --bg:#f5f7fb; --card:#ffffff; --accent:#1e6fff; --muted:#666; --success:#088f3a;
+      --maxw:1000px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:var(--bg); color:#0b1220; line-height:1.5}
+    .wrap{max-width:var(--maxw); margin:28px auto; padding:20px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#6aa0ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:12px; text-decoration:none; color:var(--muted); font-weight:600}
+
+    .hero{background:linear-gradient(90deg, rgba(30,111,255,0.06), rgba(30,111,255,0.02)); padding:24px; border-radius:var(--radius); display:grid; grid-template-columns:1fr; gap:12px; margin-top:18px}
+    .hero h1{margin:0;font-size:22px}
+    .hero p{margin:0;color:var(--muted)}
+    .grid{display:grid; grid-template-columns:1fr 340px; gap:18px; margin-top:18px}
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(18,35,80,0.06)}
+    h2{margin-top:0}
+    .small{font-size:14px;color:var(--muted)}
+
+    ul{padding-left:18px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);font-weight:600;font-size:13px}
+
+    /* video responsive */
+    .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px}
+    .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+    .checklist li{margin-bottom:8px}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    footer{margin-top:22px; text-align:center; color:var(--muted); font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <div style="font-weight:800">Conscientização: Phishing</div>
+          <div class="small">Material de treinamento interno</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#o-que-e">O que é</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#como-identificar">Como identificar</a>
+        <a href="#prevenir">Prevenir</a>
+      </nav>
+    </header>
+
+    <section class="hero card" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Phishing: o que é e como se proteger</h1>
+        <p class="small">Um guia prático e amigável para reconhecer ataques de phishing, treinar sua equipe e agir corretamente caso você clique em algum link suspeito.</p>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="pill">Treinamento</a>
+        <a class="pill">Checklist</a>
+        <a class="pill">Recursos</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <main>
+        <section id="o-que-e" class="card" aria-labelledby="sec-que-e">
+          <h2 id="sec-que-e">O que é phishing?</h2>
+          <p>Phishing é uma técnica de engenharia social em que atacantes enviam mensagens (por e-mail, SMS, WhatsApp ou redes sociais) que simulam ser de fontes confiáveis para induzir a vítima a entregar informações sensíveis (senhas, dados bancários) ou clicar em links e baixar arquivos maliciosos.</p>
+        </section>
+
+        <section id="tipos" class="card" aria-labelledby="sec-tipos" style="margin-top:14px">
+          <h2 id="sec-tipos">Tipos comuns de phishing</h2>
+          <ul>
+            <li><strong>Email de urgência:</strong> aviso de alteração de senha, cobrança falsa ou bloqueio de conta.</li>
+            <li><strong>Spear phishing:</strong> ataque dirigido a uma pessoa/empresa específica, com informações personalizadas.</li>
+            <li><strong>Smishing:</strong> phishing via SMS.</li>
+            <li><strong>Vishing:</strong> phishing via ligação telefônica.</li>
+            <li><strong>Clone de site:</strong> página falsa que imita um serviço legítimo para capturar credenciais.</li>
+          </ul>
+        </section>
+
+        <section id="como-identificar" class="card" aria-labelledby="sec-identificar" style="margin-top:14px">
+          <h2 id="sec-identificar">Como identificar um e-mail/ mensagem de phishing</h2>
+          <ul>
+            <li><strong>Urgência exagerada</strong> — "faça agora ou será bloqueado".</li>
+            <li><strong>Erro de remetente</strong> — domínio diferente, endereços estranhos ou variações sutis.</li>
+            <li><strong>Links encurtados ou estranhos</strong> — passe o mouse (hover) e confira o destino real antes de clicar.</li>
+            <li><strong>Erros de ortografia e gramática</strong> — sinais comuns de fraude.</li>
+            <li><strong>Anexos inesperados</strong> — não abra arquivos sem verificar com o remetente.</li>
+            <li><strong>Solicitação de informações sensíveis</strong> — empresas legítimas raramente pedem senha por e-mail.</li>
+          </ul>
+        </section>
+
+        <section id="prevenir" class="card" aria-labelledby="sec-prevenir" style="margin-top:14px">
+          <h2 id="sec-prevenir">Como se prevenir — checklist</h2>
+          <ul class="checklist">
+            <li>Habilite autenticação de dois fatores (2FA) sempre que possível.</li>
+            <li>Verifique o remetente e o link antes de clicar (hover no link).</li>
+            <li>Use gerenciador de senhas para criar e armazenar senhas fortes únicas.</li>
+            <li>Mantenha sistema operacional e antivírus atualizados.</li>
+            <li>Desconfie de anexos e não baixe arquivos de fontes desconhecidas.</li>
+            <li>Use canais oficiais para confirmar solicitações urgentes (ligue para a empresa).</li>
+            <li>Reporte imediatamente qualquer e-mail suspeito ao time de segurança.</li>
+          </ul>
+          <p style="margin-top:10px"><strong>Se você clicou:</strong> não insira credenciais; desconecte-se da rede se possível, comunique o time de TI/Segurança e altere senhas usadas em serviços críticos com 2FA ativado.</p>
+        </section>
+
+        <section class="card" style="margin-top:14px" aria-labelledby="sec-video">
+          <h2 id="sec-video">Vídeo: como se prevenir (YouTube)</h2>
+          <p class="small">Abaixo há um espaço para inserir um vídeo do YouTube com explicações práticas. Substitua <code>VIDEO_ID</code> pelo ID do vídeo escolhido.</p>
+          <div class="video-wrap" aria-hidden="false">
+            <!-- Substitua VIDEO_ID pela ID do vídeo do YouTube (ex: https://www.youtube.com/watch?v=XXXXXXXX -> VIDEO_ID = XXXXXXXX) -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Vídeo de prevenção ao phishing" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:14px" aria-labelledby="sec-templates">
+          <h2 id="sec-templates">Template seguro: o que enviar ao usuário que clicou</h2>
+          <p>Se alguém na sua equipe clicou no link durante a simulação, envie uma comunicação curta com orientação e link para o micro-treinamento:</p>
+          <pre style="background:#f6f8fb;padding:12px;border-radius:8px; overflow:auto">Olá {{NOME}},
+Detectamos que você clicou em um link durante a simulação interna de phishing. Isso é um alerta para revisarmos boas práticas.
+
+Por favor, não informe senhas. Acesse o treinamento rápido agora: {{LINK_INTERNO}}
+
+Se precisar de ajuda imediata, contate o time de Segurança.</pre>
+        </section>
+
+        <section class="card" style="margin-top:14px" aria-labelledby="sec-faq">
+          <h2 id="sec-faq">Perguntas frequentes (FAQ)</h2>
+          <h3 style="margin-bottom:6px">O que a empresa faz com os resultados?</h3>
+          <p class="small">Resultados são usados para melhorar treinamentos — a análise é agregada por departamento sempre que possível para evitar exposição pública.</p>
+          <h3 style="margin-bottom:6px">Vocês coletam minha senha?</h3>
+          <p class="small">Não. Nunca coletamos senhas reais. Preferimos autodeclaração ou mecanismos que não gravem credenciais.</p>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Checklist rápido</h3>
+          <ul>
+            <li>Ative 2FA</li>
+            <li>Use gerenciador de senhas</li>
+            <li>Verifique remetente e link</li>
+            <li>Atualize seu dispositivo</li>
+            <li>Reporte e-mails suspeitos</li>
+          </ul>
+          <a class="cta" href="#prevenir">Quero o checklist</a>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Recursos úteis</h3>
+          <ul>
+            <li><a href="https://www.cert.br/" target="_blank" rel="noopener">CERT.br</a> (Brasil)</li>
+            <li><a href="https://www.safernet.org.br/" target="_blank" rel="noopener">SaferNet</a></li>
+            <li><a href="https://staysafeonline.org/" target="_blank" rel="noopener">National Cyber Security Alliance</a></li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Contato</h3>
+          <p class="small">Segurança da Informação<br>seguranca@empresa.local</p>
+          <button onclick="reportClicked()" style="padding:10px 12px;border-radius:8px;border:1px solid #e6e6e6;background:#fff;cursor:pointer">Eu cliquei — reportar</button>
+          <p id="report-msg" class="small" style="margin-top:8px;color:var(--success);display:none">Obrigado — reporte enviado ao time de Segurança.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="small">Feito para treinamento interno • © <span id="ano"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    function reportClicked(){
+      // behavior: envia apenas um sinal local (sem backend). Você pode integrar com um endpoint para registrar.
+      document.getElementById('report-msg').style.display = 'block';
+      // opcional: enviar fetch para endpoint interno (não incluído por segurança)
+      // fetch('/report-click', {method:'POST', body:JSON.stringify({user: 'anonymized', time:Date.now()})})
+    }
+  </script>
+</body>
+</html>
